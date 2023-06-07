@@ -10,11 +10,11 @@ namespace Giraffe
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please enter a sequence of symbols:");
-            string input = Console.ReadLine();
+            Console.Write("Please enter a sequence of symbols: "); 
+            string input = Console.ReadLine(); // lets the user to enter string
 
-            int maxLength = 1;
-            int currentLength = 1;
+            int maxLength = 1; // keep track of the maximum and current lengths of unequal consecutive characters
+            int currentLength = 1; // keep track of the maximum and current lengths of unequal consecutive characters
 
             for (int i = 1; i < input.Length; i++)
             {
@@ -24,7 +24,7 @@ namespace Giraffe
                 }
                 else
                 {
-                    maxLength = Math.Max(maxLength, currentLength);
+                    maxLength = Math.Max(maxLength, currentLength); // maxLength is updated if currentLength is greater than the current maxLength, and currentLength is reset to 1
                     currentLength = 1;
                 }
             }
